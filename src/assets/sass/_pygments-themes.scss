@@ -1,0 +1,70 @@
+@import '../style/color';
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+    background: #262b31;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: .1em .3em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #494d391f;
+  font-style: italic;
+  color: $tertiary;
+}
+
+.gatsby-highlight {
+  margin: .5rem 0 1rem 0;
+
+}
+
+.gatsby-highlight pre[class*="language-"] {
+
+  &::-webkit-scrollbar {
+    width: 8px !important;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(170, 169, 169, 0.11);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(134, 134, 134, 0.726);
+    border-radius: 999px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(119, 118, 118, 0.726);
+  }
+  
+}
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
+
+}
+
+.command-line-prompt > span:before {
+  color: #999;
+  content: " ";
+  display: block;
+  padding-right: 0.8em;
+}
+
+/* Prompt for all users */
+.command-line-prompt > span[data-user]:before {
+  content: "[" attr(data-user) "@" attr(data-host) "] $";
+}
+
+/* Prompt for root */
+.command-line-prompt > span[data-user="root"]:before {
+  content: "[" attr(data-user) "@" attr(data-host) "] #";
+}
+
+.command-line-prompt > span[data-prompt]:before {
+  content: attr(data-prompt);
+}

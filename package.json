@@ -1,25 +1,15 @@
 {
-  "name": "know-how",
+  "name": "nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p $PORT"
+    "start": "next start"
   },
   "dependencies": {
-    "next": "^10.0.7",
+    "next": "10.0.7",
     "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "vietnamese-slug": "^1.1.4"
-  },
-  "devDependencies": {
-    "gray-matter": "^4.0.2",
-    "remark-highlight.js": "^6.0.0",
-    "remark-html": "^13.0.1",
-    "remark-parse": "^9.0.0",
-    "sass": "^1.30.0",
-    "unified": "^9.2.0",
-    "uuid": "^8.3.2"
+    "react-dom": "17.0.1"
   }
 }
